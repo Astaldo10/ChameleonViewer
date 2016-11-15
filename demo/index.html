@@ -1,0 +1,91 @@
+<!DOCTYPE html5>
+<html>
+	<head>
+		<title>ChameleonViewer demo</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+
+		<!-- Chameleon css dependency -->
+		<link rel="stylesheet" type="text/css" href="chameleon_assets/chameleon.viewer.css" media="all">
+
+		<!-- Other dependences -->
+		<script type="text/javascript" src="lib/jquery.min.1.7.js"></script>
+		<script type="text/javascript" src="lib/jquery.mousewheel.min.js"></script>
+		<script type="text/javascript" src="lib/screenfull.min.js"></script>
+		<script type="text/javascript" src="lib/hammer.min.js"></script>
+
+		<!-- Chameleon js depencency -->
+		<script type="text/javascript" src="../src/chameleon.viewer.js"></script>
+
+		<!-- Example style -->
+		<style type="text/css">
+
+			body {
+				font-family: Helvetica, auto;
+				width: 100%;
+				height: 100%;
+				margin: 0;
+				padding: 0;
+			}
+
+			#page-container {
+				display: table;
+				width: inherit;
+				height: inherit;
+			}
+
+			#page-wrapper {
+				display: table-cell;
+				vertical-align: middle;
+			}
+
+			#chameleon-viewer {
+				position: relative;
+				width: 100%;
+				max-width: 800px;
+				height: 100%;
+				max-height: 533px;
+				margin: 0 auto;
+			}
+
+		</style>
+	</head>
+	<body>
+
+		<!-- Vertically page centered viewer -->
+		<div id="page-container">
+			<div id="page-wrapper">
+
+				<!-- ChameleonViewer container -->
+				<div id="chameleon-viewer"></div>
+			</div>
+		</div>
+
+		<!-- Viewer constructor -->
+		<script type="text/javascript">
+			$('#chameleon-viewer').chameleon({
+				options: {
+					images: [
+						{
+							url: 'images/1.png',
+							subtitle: 'Python rules. There is nothing more to say.'
+						},
+						{
+							url: 'images/2.png',
+							subtitle: 'Javascript has become a strong programming language.'
+						},
+						{
+							url: 'images/3.png',
+							subtitle: 'Manjaro is cool.'
+						},
+						{
+							url: 'images/4.png',
+							subtitle: 'A cat.'
+						}
+					],
+					title: 'CHAMELEON VIEWER DEMO'
+				}
+			});
+		</script>
+	</body>
+</html>

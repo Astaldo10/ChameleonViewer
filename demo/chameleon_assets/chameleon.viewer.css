@@ -1,0 +1,238 @@
+/* Viewer style */
+.chameleon-viewer {
+	background-repeat: no-repeat;
+	background-size: contain;     /* Default image size. */
+	background-position: center;  /* Default image position. */
+	outline: none;
+}
+
+/* Container style */
+.chameleon-elements-container {
+	position: relative;
+	width: inherit;
+	height: inherit;
+	background-color: rgba(150, 150, 150, 0.4);
+}
+
+.chameleon-elements-container-zoom {
+	background-color: transparent;
+	cursor: move;
+}
+
+/* Sections style */
+
+.chameleon-top-section, .chameleon-bottom-section, .chameleon-left-section, .chameleon-right-section {
+	position: absolute;
+	display: flex;
+	cursor: default;
+}
+
+.chameleon-top-section, .chameleon-bottom-section {
+	width: inherit;
+	right: 0;
+	left: 0;
+	z-index: 1; /* Prioritizes the top and bottom sections to be shown over the left and right sections. */
+	background-color: black;
+}
+
+.chameleon-left-section, .chameleon-right-section {
+	height: inherit;
+	top: 0;
+	bottom: 0;
+}
+
+.chameleon-top-section {
+	top: 0;
+}
+
+.chameleon-bottom-section {
+	bottom: 0;
+}
+
+.chameleon-left-section {
+	left: 0;
+}
+
+.chameleon-right-section {
+	right: 0;
+}
+
+/* Subsections style */
+
+.chameleon-top-left-section, .chameleon-top-center-section, .chameleon-top-right-section,
+.chameleon-bottom-left-section, .chameleon-bottom-center-section, .chameleon-bottom-right-section {
+	display: inline-flex;
+}
+
+.chameleon-left-top-section, .chameleon-left-center-section, .chameleon-left-bottom-section,
+.chameleon-right-top-section, .chameleon-right-center-section, .chameleon-right-bottom-section {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.chameleon-push-left {
+	margin-right: auto;
+}
+
+.chameleon-push-right {
+	margin-left: auto;
+}
+
+.chameleon-top-left-section, .chameleon-bottom-left-section {
+	width: 75%;
+	justify-content: flex-start;
+}
+
+.chameleon-top-right-section, .chameleon-bottom-right-section {
+	width: 25%;
+	justify-content: flex-end;
+}
+
+.chameleon-top-right-section {
+	align-items: flex-start;
+}
+
+.chameleon-bottom-right-section {
+	align-items: flex-end;
+}
+
+.chameleon-left-center-section, .chameleon-right-center-section {
+	height: 100%;
+}
+
+.chameleon-horizontal-section-padding {
+	padding: 10px;
+}
+
+.chameleon-vertical-section-padding {
+	padding: 0 10px;
+}
+
+/* Elements style */
+
+.chameleon-next-arrow, .chameleon-prev-arrow,.chameleon-fullscreen, .chameleon-zoom {
+	cursor: pointer;
+}
+
+.chameleon-next-arrow, .chameleon-prev-arrow {
+	padding: 10px;
+}
+
+.chameleon-fullscreen, .chameleon-zoom-container {
+	padding: 10px 5px;
+}
+
+.chameleon-zoom-container {
+	position: relative;
+	width: 25px;
+}
+
+.chameleon-zoom-slide-container {
+	position: absolute;
+	left: -6px;
+	width: 25px;
+	padding: 0 10px 10px;
+	background-color: black;
+}
+
+.chameleon-zoom-out {
+	padding-top: 55px;
+}
+
+.chameleon-zoom-slider {
+	top: 35px;
+	width: 100px;
+	height: 25px;
+	margin: 50 0 0 -37.5px;
+
+	/* Vertical transformation */
+	transform: rotate(270deg);
+	-moz-transform: rotate(270deg);
+	-webkit-appearance: none;
+}
+
+.chameleon-zoom-slider:focus {
+	outline: none;
+}
+
+.chameleon-zoom-slider::-moz-range-track {
+	-webkit-appearance: none;
+	border-radius: 8px;
+	height: 7px;
+	/*border: 1px solid #bdc3c7;*/
+	background-color: #fff;
+}
+
+.chameleon-zoom-slider::-moz-range-thumb {
+	-webkit-appearance: none;
+	background: #ecf0f1;
+	/*border: 1px solid #bdc3c7;*/
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.chameleon-title, .chameleon-subtitle {
+	-webkit-appearance: none;
+	display: flex;
+	align-self: center;
+	padding: 10px 20px;
+	width: 100%;
+	color: white;
+}
+
+.chameleon-title {
+	font-size: 10pt;
+}
+
+.chameleon-subtitle {
+	font-size: 9pt;
+}
+
+.chameleon-images-counter {
+	padding: 10px;
+}
+
+.chameleon-images-total-container, .chameleon-images-current {
+	float: right;
+	color: white;
+}
+
+.chameleon-images-total-container {
+	padding: 7px 0;
+	font-size: 10pt;
+}
+
+.chameleon-images-current {
+	width: 40%;
+	border: none;
+	background-color: transparent;
+	text-align: right;
+	font-size: 12pt;
+}
+
+.chameleon-images-current:hover, .chameleon-images-current:focus {
+	background-color: rgba(75, 75, 75, 0.8);
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.chameleon-images-separator {
+	margin: 0 2px;
+}
+
+.chameleon-images-total {
+	width: 60%;
+}
+
+/* Fullscreen */
+
+.chameleon-fullscreen-viewer {
+	width: 100% !important;
+	height: 100% !important;
+	max-width: none !important;
+	max-height: none !important;
+	background-color: black !important;
+}
